@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name": "Sabre de Luz Verde",
+      "description": "Promoção - compre 2, leve 2",
+      "price": 469.91
+   },
+   {
+      "id": 2,
+      "name": "Viratempo",
+      "description": "Desconto especial para quem comprar ontem!",
+      "price": 99.90
+   },
+   {
+      "id": 3,
+      "name": "Viagem à Lua",
+      "description": "Passeio completo por todas as crateras do lado visível",
+      "price": 99999.00,
+      "origin": "Estação espacial internacional",
+      "destination": "Lua"
+   },
+   {
+      "id": 4,
+      "name": "Cruzeiro pelo Caribe",
+      "description": "Paradas nos locais de filmagem da franquia Piratas do Caribe",
+      "price": 5990.00,
+      "origin": "Bahamas",
+      "destination": "Barbados"
+   }
+]

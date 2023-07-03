@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model labecommer_users{
+  id String      @id  @unique @db.VarChar(255)
+  name String    @db.VarChar(255)
+  email String    @unique @db.VarChar(255)
+  age Int 
+  labecommerce_purchases labecommerce_purchases[]
+}
+
+model labecommerce_products{
+  id String             @id  @unique @db.VarChar(255)
+  name String           @unique @db.VarChar(255)
+  description String    @db.VarChar(255)
+  price Float 
+  labecommerce_tickes     labecommerce_tickes[]
+  labecommerce_purchases labecommerce_purchases[]
+}
+
+
+model labecommerce_purchases{
+  id Int @id @default(autoincrement())
+  user_id String    @db.VarChar(255)
+  product_id String  @db.VarChar(255)
+  quantity Int @default(1)
+  total_amount Int 
+  user      labecommer_users @relation(fields: [user_id], references:[id])
+  product   labecommerce_products @relation(fields: [product_id], references:[id])
+}
+
+
+model labecommerce_tickes{
+  id String             @id @db.VarChar(255)
+  name String           @unique @db.VarChar(255)
+  description String    @db.VarChar(255)
+  price Float 
+  origin String         @db.VarChar(255)
+  destination String    @db.VarChar(255)
+  product_id  String    @db.VarChar(255)
+  product   labecommerce_products @relation(fields: [product_id], references:[id])
+ 
+}
+
+
+
+
+
+
+
+
+
+

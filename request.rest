@@ -1,0 +1,79 @@
+POST http://localhost:3003/users
+Content-Type: application/json
+
+{
+  "name":"Rafael Zambrano",
+  "email":"rz21873@gmail.com",
+  "age":38
+}
+
+###
+GET  http://localhost:3003/users/a508ee7a-68ce-4850-be57-5ffa1eb49b0f
+
+
+###
+GET  http://localhost:3003/purchasesuser/a508ee7a-68ce-4850-be57-5ffa1eb49b0f
+
+
+###
+PUT http://localhost:3003/users/edit/ba50fa62-93b0-4090-bab7-b4f7acf3c4f4
+Content-Type: application/json
+
+{ 
+  
+  "name":"Fernando Antonio Zambrano Barroso"
+ 
+ 
+  
+}
+
+###
+POST http://localhost:3003/products
+Content-Type: application/json
+
+{
+  "name":"Camisa Polo",
+  "description":"Camisa Polo",
+  "price":100
+ 
+}
+
+###
+GET  http://localhost:3003/products
+
+
+
+###
+POST http://localhost:3003/purchases
+Content-Type: application/json
+
+{
+  "user_id":"a508ee7a-68ce-4850-be57-5ffa1eb49b0f",
+  "product_id":"ab1763b1-0445-41e3-8506-f18e6bbd9b54",
+  "quantity":2,
+  "total_amount":2000
+ 
+}
+
+###
+GET  http://localhost:3003/purchases
+
+###
+GET  http://localhost:3003/purchasesuser/0fad7b23-2457-460f-849e-d26b1a80e040
+
+###
+POST http://localhost:3003/trip
+Content-Type: application/json
+
+{
+  "name":"Voo Gool",
+  "description":"Voo aerolinha Latam",
+  "price":1000,
+  "origin":"Boa Vista RR",
+  "destination":"São Paulo",
+  "product_id":"ab1763b1-0445-41e3-8506-f18e6bbd9b54"
+}
+
+
+###
+GET  http://localhost:3003/trips
